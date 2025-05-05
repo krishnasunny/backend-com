@@ -4,7 +4,7 @@ const logger = require('../utils/logger');
 const getCart = async (req, res) => {
   try {
     const query = `
-      SELECT c.cart_id, c.quantity,
+      SELECT c.cart_id, c.quantity, p.product_id,
              p.product_name, p.base_price,
              pv.variant_name, pv.variant_price,
              pi.image_url
